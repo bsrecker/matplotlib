@@ -1,7 +1,6 @@
 from tkinter import *
 from matplotlib.figure import Figure
-from matplotlib.backends.backend_tkagg import (FigureCanvasTkAgg,
-                                               NavigationToolbar2Tk)
+from matplotlib.backends.backend_tkagg import (FigureCanvasTkAgg, NavigationToolbar2Tk)
 
 
 # plot function is created for
@@ -9,8 +8,7 @@ from matplotlib.backends.backend_tkagg import (FigureCanvasTkAgg,
 # tkinter window..
 def plot():
     # the figure that will contain the plot
-    fig = Figure(figsize=(5, 5),
-                 dpi=100)
+    fig = Figure(figsize=(5, 5), dpi=100)
 
     # list of squares
     y = [i ** 2 for i in range(101)]
@@ -23,16 +21,14 @@ def plot():
 
     # creating the Tkinter canvas
     # containing the Matplotlib figure
-    canvas = FigureCanvasTkAgg(fig,
-                               master=window)
+    canvas = FigureCanvasTkAgg(fig, master=window)
     canvas.draw()
 
     # placing the canvas on the Tkinter window
     canvas.get_tk_widget().pack()
 
     # creating the Matplotlib toolbar
-    toolbar = NavigationToolbar2Tk(canvas,
-                                   window)
+    toolbar = NavigationToolbar2Tk(canvas, window)
     toolbar.update()
 
     # placing the toolbar on the Tkinter window
