@@ -6,7 +6,7 @@ from matplotlib.backends.backend_tkagg import (FigureCanvasTkAgg,
 
 # plot function is created for
 # plotting the graph in
-# tkinter window
+# tkinter window..
 def plot():
     # the figure that will contain the plot
     fig = Figure(figsize=(5, 5),
